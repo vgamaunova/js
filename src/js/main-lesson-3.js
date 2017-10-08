@@ -38,7 +38,7 @@ ferrari = {
 }
 
 
-lexus.ride()
-lexus.changeWheels()
-lexus.playMusic();
-ferrari.changeWheels();
+// lexus.ride()
+// lexus.changeWheels()
+// lexus.playMusic();
+// ferrari.changeWheels();
