@@ -8,7 +8,7 @@
         var arrayValueItem = haystack[i];
         if (arrayValueItem == needle) {
             console.log(arrayValueItem);
-            break
+            break;
         }
     }
 }());
@@ -18,7 +18,6 @@
 */
 (function () {
     var array = [1, -5554, 3, 454, 3, 556];
-    var newArray = [];
     for (var i = 0; i < array.length; i++) {
         var largest = i;
         for (j = i + 1; j < array.length; j++) {
@@ -50,7 +49,8 @@
     for (var i = 0; i < haystack.length; i++) {
         var arrayValueItem = haystack[i];
         if (typeof(arrayValueItem) === needle) {
-            console.log('this string is ' + arrayValueItem)
+            console.log('this string is ' + arrayValueItem);
+            break;
         }
     }
 }());
