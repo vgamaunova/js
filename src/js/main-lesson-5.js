@@ -1,7 +1,7 @@
 function computerProgress() {
     var numberCol = Math.floor(Math.random() * 9) + 1;
     var itemColArray = document.querySelectorAll('.col:nth-child('+numberCol+')');
-    var  itemCol = itemColArray[0];
+    var itemCol = itemColArray[0];
     if(document.querySelectorAll('.disabled').length <=8){
         if(!itemCol.classList.contains('disabled')){
             itemCol.classList.add('disabled');
