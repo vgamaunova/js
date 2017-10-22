@@ -20,6 +20,6 @@ var positionTop = 0;
         console.log(positionTop);
     }
 // }())
-setInterval(positionElement, 2000);
+// setInterval(positionElement, 2000);
 
 // setInterval(console.log(function(){return top = top + 10}), 2000);
