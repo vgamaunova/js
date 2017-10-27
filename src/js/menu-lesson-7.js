@@ -5,8 +5,9 @@
 document.onclick = function(e){
     console.log('left '+ e.target.offsetLeft+', top '+e.target.offsetTop)
 };
+
 /*
-* loading component
+* Loading component
  */
 (function () {
     function addClass(elem) {
@@ -30,27 +31,13 @@ document.onclick = function(e){
 })();
 
 
-//button-wrapper
-document.querySelector(".button-wrapper").onclick = function(e){
-    Menu(e)
-};
-function Menu(e) {
-    var elem = document.querySelector(".car");
-    this.fast = function() {
-        alert( 'сохраняю' );
-        elem.style.cssText = 'transform: translate (100px, 0);transition:0.5s'
-    };
-    this.slow = function() {
-        alert( '2' );
-        elem.style.cssText = 'transform: translate (100px, 0);transition:2s'
-    };
-    var self = this;
+//
 
-    elem.onclick = function(e) {
-        var target = e.target;
-        var action = target.getAttribute('data-speed');
-        if (action) {
-            self[action]();
-        }
-    };
-}
+document.querySelector(".button-wrapper").onclick = function(e){
+     var car = document.querySelector(".car");
+    if(e.target.classList == "fast"){
+        car.style.cssText = 'transform: translate(-100px, 50px);transition: 0.5s';
+    }else if(e.target.classList == "slow"){
+        car.style.cssText = 'transform: translate(-100px, 50px);transition:2s';
+    }
+};
