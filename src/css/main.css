@@ -56,3 +56,51 @@
     float: left;
 }
 /*transform: translate(tx[, ty])*/
+.note{
+    min-height: 100vh;
+    height: 100%;
+    background: url('../img/background-2132913_960_720.jpg') no-repeat;
+    background-size: cover;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.note-item{
+    text-align: center;
+    padding: 45px;
+    width: 240px;
+    min-height: 240px;
+    box-shadow: 8px 6px 12px 1px #000;
+    margin: 15px;
+    background: url('../img/background-with-rose.jpg') no-repeat;
+    background-size: cover;
+    color: #4a4650;
+    font-size: 21PX;
+    font-family: sans-serif;
+    font-style: italic;
+}
+.notes-input{
+    width: 80%;
+    font-size: 20px;
+    height: 35px;
+
+}
+.note-submit{
+    padding:10px 15px;
+    font-size: 20px;
+    background: #4a4650;
+    color:#fff;
+    border-radius: 3px;
+    border:none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.notes-form{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 50%;
+    margin: auto
+}
