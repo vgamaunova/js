@@ -1,0 +1,31 @@
+.container{
+    width: 156px;
+    margin:auto;
+}
+.row{
+    clear: both;
+    text-align: center;
+}
+.col{
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.col.disabled{
+    cursor: not-allowed;
+}
+.message{
+    width: 50%;
+    margin: auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    clear: both;
+}

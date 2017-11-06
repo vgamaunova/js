@@ -1,23 +1,43 @@
-function car(name){
-    this.name = name;
-};
-car.prototype.go = function() {
-    console.log( 'go ' + this.name );
-};
+/*
+* get local storage and wright history game
+ */
+function addToLocalStorage(){
+    if(localStorage.getItem('сыграно')!=''){
+        var dataNumber = +localStorage.getItem('сыграно') + 1;
+        localStorage.setItem('сыграно', dataNumber);
+    }else{
+        localStorage.setItem('сыграно', '1');
+    }
+}
 
-function  cabriolet(name) {
-    this.name = name;
-};
-cabriolet.prototype = Object.create(car.prototype);
-
-
-cabriolet.prototype.go = function() {
-    console.log( 'hinged roof and  go');
-};
-
-var cabrioletCar = new cabriolet('cabriolet');
-
-var truck =  new car('DAF');
-
-cabrioletCar.go();
-truck.go();
+function computerProgress() {
+    var numberCol = Math.floor(Math.random() * 9) + 1;
+    var itemColArray = document.querySelectorAll('.col:nth-child('+numberCol+')');
+    var itemCol = itemColArray[0];
+    if(document.querySelectorAll('.disabled').length <=8){
+        if(!itemCol.classList.contains('disabled')){
+            itemCol.classList.add('disabled');
+            itemCol.innerText = 'x';
+            return false;
+        }else{
+            computerProgress();
+        }
+    }else{
+        document.getElementById('message').innerText = 'Game over';
+        addToLocalStorage();
+        return false;
+    }
+}
+function userProgress(param) {
+    if(document.querySelectorAll('.disabled').length <= 8){
+        if(!param.classList.contains('disabled')){
+            param.classList.add('disabled');
+            param.innerText = '0';
+            return false;
+        }
+    }else{
+        document.getElementById('message').innerText = 'Game over';
+        addToLocalStorage();
+        return false;
+    }
+}
